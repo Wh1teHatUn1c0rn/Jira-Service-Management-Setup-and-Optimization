@@ -2,16 +2,16 @@ import requests
 import json
 
 # Jira credentials and API endpoint
-jira_base_url = "https://domain.atlassian.net" # Change this
-email = "email@example.com" # Change this
-api_token = "api-token" # Change this
+jira_base_url = "https://domain.atlassian.net" # Replace it with your Jira domain
+email = "email@example.com" # Replace with a recipients email
+api_token = "api-token" # Replace with your generated API token
 headers = {
     "Authorization": f"Basic {requests.auth._basic_auth_str(email, api_token)}",
     "Content-Type": "application/json"
 }
 
 # Automation rule creation endpoint
-automation_url = f"domain.atlassian.net/rest/api/3/automation/rule" #Change this
+automation_url = f"domain.atlassian.net/rest/api/3/automation/rule" #Replace it with your Jira API endpoint
 
 # Define the automation rule
 rule_payload = {
